@@ -23,12 +23,13 @@ Welcome to my official portfolio. This website showcases my development work and
 
 ## 📂 Projects Included | پڕۆژەیێن من
 ئەڤ وێبسایتە لینک و زانیاریێن ڤان پڕۆژەیێن خوارێ ب خۆ ڤە دگریت:
-1. **Payven MN** - Online services platform.
-2. **TikTok DL** - Video downloader tool.
-3. **ShiMovies** - Movies & Series streaming hub.
-4. **Stick Hero Kurd** - Localized web game.
-5. **Kurdroid** - Kurdish Android apps center.
-6. **Kurd TV** - Kurdish channels live streaming.
+1. **Kurd Movies** - watch the latest global films and series in stunning 4K.
+2. **Payven MN** - Online services platform.
+3. **TikTok DL** - Video downloader tool.
+4. **ShiMovies** - Movies & Series streaming hub.
+5. **Stick Hero Kurd** - Localized web game.
+6. **Kurdroid** - Kurdish Android apps center.
+7. **Kurd TV** - Kurdish channels live streaming.
 
 ---
 
