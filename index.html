@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="ku" dir="rtl" id="mainHtml">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>شفان جمال | Portofolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;500;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;500;700&family=Poppins:wght@300;500;700&display=swap"
+        rel="stylesheet">
+
     <style>
         :root {
             --primary: #0fbcf9;
@@ -15,88 +18,265 @@
             --text: #f8f9fa;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: var(--dark); color: var(--text); scroll-behavior: smooth; min-height: 100vh; }
-        
-        [dir="rtl"] { font-family: 'Vazirmatn', sans-serif; }
-        [dir="ltr"] { font-family: 'Poppins', sans-serif; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--text);
+            scroll-behavior: smooth;
+            min-height: 100vh;
+        }
+
+        [dir="rtl"] {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+
+        [dir="ltr"] {
+            font-family: 'Poppins', sans-serif;
+        }
 
         header {
-            background: rgba(11, 15, 25, 0.9); backdrop-filter: blur(15px);
-            padding: 12px 0; position: sticky; top: 0; z-index: 1000;
+            background: rgba(11, 15, 25, 0.9);
+            backdrop-filter: blur(15px);
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             border-bottom: 1px solid var(--border);
         }
 
-        nav { display: flex; justify-content: space-around; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        nav ul { display: flex; list-style: none; }
-        nav ul li { margin: 0 12px; }
-        nav ul li a { color: var(--text); text-decoration: none; font-weight: 500; font-size: 0.9rem; opacity: 0.8; }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 12px;
+        }
+
+        nav ul li a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
 
         /* Language Switcher */
-        .lang-menu { position: relative; }
+        .lang-menu {
+            position: relative;
+        }
+
         .lang-selected {
-            background: rgba(255,255,255,0.05); border: 1px solid var(--border);
-            padding: 6px 12px; border-radius: 10px; cursor: pointer;
-            display: flex; align-items: center; gap: 8px; font-size: 0.85rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
         }
-        .lang-selected img { width: 20px; border-radius: 3px; }
+
+        .lang-selected img {
+            width: 20px;
+            border-radius: 3px;
+        }
+
         .lang-dropdown {
-            position: absolute; top: 125%; right: 0; background: #1c2333;
-            border: 1px solid var(--border); border-radius: 10px;
-            width: 140px; display: none; box-shadow: 0 10px 25px rgba(0,0,0,0.5); z-index: 1001;
+            position: absolute;
+            top: 125%;
+            right: 0;
+            background: #1c2333;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            width: 140px;
+            display: none;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            z-index: 1001;
         }
-        [dir="ltr"] .lang-dropdown { right: auto; left: 0; }
-        .lang-dropdown.show { display: block; }
-        .lang-item { padding: 10px; display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: 0.85rem; }
-        .lang-item:hover { background: var(--primary); }
-        .lang-item img { width: 20px; border-radius: 3px; }
+
+        [dir="ltr"] .lang-dropdown {
+            right: auto;
+            left: 0;
+        }
+
+        .lang-dropdown.show {
+            display: block;
+        }
+
+        .lang-item {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        .lang-item:hover {
+            background: var(--primary);
+        }
+
+        .lang-item img {
+            width: 20px;
+            border-radius: 3px;
+        }
 
         /* Hero */
-        .hero { padding: 60px 20px 40px; text-align: center; }
-        .profile-img {
-            width: 100px; height: 100px; border-radius: 30px; transform: rotate(-5deg);
-            border: 2px solid var(--primary); margin: 0 auto 20px;
-            background-image: url('https://i.ibb.co/Fk5Vw6rb/8-FAED894-0034-4155-A6-E7-ABF8-FE9-B570-F.png');
-            background-size: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        .hero {
+            padding: 60px 20px 40px;
+            text-align: center;
         }
-        .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 8px; }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 30px;
+            transform: rotate(-5deg);
+            border: 2px solid var(--primary);
+            margin: 0 auto 20px;
+            background-image: url('https://i.ibb.co/Fk5Vw6rb/8-FAED894-0034-4155-A6-E7-ABF8-FE9-B570-F.png');
+            background-size: cover;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
 
         /* Project Grid & Cards */
-        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1100px; margin: 40px auto; padding: 0 20px; }
-        
-        .project-card { 
-            background: var(--card-bg); border: 1px solid var(--border); 
-            border-radius: 20px; overflow: hidden; transition: 0.4s; 
-            display: flex; flex-direction: column;
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
-        .project-card:hover { transform: translateY(-10px); border-color: var(--primary); }
+
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.4s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+        }
 
         .project-image {
-            width: 100%; height: 180px; background-size: cover; background-position: center;
+            width: 100%;
+            height: 180px;
+            background-size: cover;
+            background-position: center;
             border-bottom: 1px solid var(--border);
         }
 
-        .project-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
-        .project-card h3 { font-size: 1.2rem; margin-bottom: 10px; color: #fff; }
-        .project-card p { font-size: 0.85rem; opacity: 0.6; margin-bottom: 15px; min-height: 45px; }
-        
-        .btn-visit { 
-            display: inline-block; padding: 10px; 
-            background: var(--primary); color: white; text-decoration: none; 
-            border-radius: 10px; font-weight: 700; font-size: 0.8rem; 
-            text-align: center; transition: 0.3s;
+        .project-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-        .btn-visit:hover { filter: brightness(1.2); transform: scale(1.02); }
+
+        .project-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .project-card p {
+            font-size: 0.85rem;
+            opacity: 0.6;
+            margin-bottom: 15px;
+            min-height: 45px;
+        }
+
+        .btn-visit {
+            display: inline-block;
+            padding: 10px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .btn-visit:hover {
+            filter: brightness(1.2);
+            transform: scale(1.02);
+        }
 
         /* Contact & Footer */
-        .contact-container { max-width: 450px; margin: 60px auto; background: var(--card-bg); padding: 30px; border-radius: 20px; border: 1px solid var(--border); }
-        .form-group { margin-bottom: 15px; }
-        [dir="rtl"] .form-group { text-align: right; }
-        [dir="ltr"] .form-group { text-align: left; }
-        input, textarea { width: 100%; padding: 10px; border-radius: 8px; background: rgba(0,0,0,0.2); border: 1px solid var(--border); color: white; margin-top: 5px; outline: none; }
-        footer { text-align: center; padding: 40px; opacity: 0.4; font-size: 0.8rem; border-top: 1px solid var(--border); }
+        .contact-container {
+            max-width: 450px;
+            margin: 60px auto;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        [dir="rtl"] .form-group {
+            text-align: right;
+        }
+
+        [dir="ltr"] .form-group {
+            text-align: left;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border);
+            color: white;
+            margin-top: 5px;
+            outline: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            opacity: 0.4;
+            font-size: 0.8rem;
+            border-top: 1px solid var(--border);
+        }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -142,11 +322,14 @@
                 <label id="lblMsg">نامە:</label>
                 <textarea name="message" rows="4" required></textarea>
             </div>
-            <button type="submit" class="btn-visit" style="width: 100%; border: none; cursor: pointer;" id="btnSend">فرێکرن</button>
+            <button type="submit" class="btn-visit" style="width: 100%; border: none; cursor: pointer;"
+                id="btnSend">فرێکرن</button>
         </form>
     </div>
 
-    <footer><p id="footerText">هەمی ماف پاراستینە ٢٠٢٦ © شفان جمال</p></footer>
+    <footer>
+        <p id="footerText">• دیزاین و دروستکرن SHVAN JAMAL • 2026</p>
+    </footer>
 
     <script>
         let currentLang = 'ku';
@@ -157,22 +340,24 @@
                 navHome: "سەرەکی", navProjects: "پڕۆژە", navContact: "پەیوەندی",
                 heroTitle: "شفان جمال", heroSub: "گەشەپێدەرێ وێبسایتان و ئافرێنەرێ چارەسەریێن تەکنۆلۆژی یێن مودێرن.",
                 viewBtn: "سەرەدان", contactTitle: "پەیوەندی", lblEmail: "ئیمەیڵ:", lblMsg: "نامە:", btnSend: "فرێکرن",
-                footerText: "هەمی ماف پاراستینە ٢٠٢٦ © شفان جمال",
+                footerText: "• دیزاین و دروستکرن SHVAN JAMAL • 2026",
                 projects: [
+                    { title: "Kurd Movies", desc: "ێدی ل فلمان نەگەڕی! مەزنترین سینەمایا کوردی د ناڤ دەستێن تە دایه. ب KURD MOVIES تەماشەی نووترین فلم و زنجیرەیێن جیهانی بکە ب کوالیتییا 4K و بێ ڕیکلامێن بێزارکەر. هەمی تشت ب زمانێ کوردی یێ بەردەستە.", link: "https://kurdmovies.netlify.app/", img: "https://i.ibb.co/YT8tFzDd/IMG-3436.jpg" },
                     { title: "Payven MN", desc: "پلاتفۆرمەکا پێشکەفتی بۆ خزمەتگوزاریێن ئۆنلاین.", link: "https://payvenmn.netlify.app", img: "https://i.ibb.co/V0bH7gmG/IMG-3052.jpg" },
                     { title: "TikTok DL", desc: "دابەزاندنا ڤیدیۆیێن تیکتۆک ب کوالێتیا بەرز.", link: "https://tiktokdl.page.gd/", img: "https://i.ibb.co/84XXkWLD/IMG-3175.png" },
                     { title: "ShiMovies", desc: "وێبسایتەکێ تەمام بۆ دیتنا فیلم و زنجیرەیێن جیهانی.", link: "https://shimovies.netlify.app", img: "https://i.ibb.co/vCQpvjjc/2-FC75-EE9-7-A46-4-D65-86-D8-58-F6-A245-BE1-E.png" },
                     { title: "Stick Hero Kurd", desc: "یارییەکا خوش و ب تێستێ کوردی.", link: "https://stick-hero-kurd.vercel.app", img: "https://i.ibb.co/7mtdnbs/IMG-3176.jpg" },
                     { title: "Kurdroid", desc: "مەلبەندێ ئەپڵیکەیشنێن کوردی بۆ ئەندرۆید.", link: "https://kurdroid.netlify.app/", img: "https://i.ibb.co/WWqJQP43/DB6-ECD0-C-4-E35-4-B1-E-9578-887-EDDE6-B2-FC.jpg" },
-                    { title: "Kurd TV", desc: "پەخشێ راستەوخۆ یێ کەناڵێن کوردی.", link: "https://kurddtv.netlify.app", img: "https://i.ibb.co/Z6cNSMtG/IMG-1831.png" }
+                    { title: "Kurd TV", desc: "پەخشێ راستەوخۆ یێ کەناڵێن کوردی.", link: "https://kurddtv.netlify.app", img: "https://i.ibb.co/Z6cNSMtG/IMG-1831.png" },
                 ]
             },
             en: {
                 navHome: "Home", navProjects: "Projects", navContact: "Contact",
                 heroTitle: "Shvan Jamal", heroSub: "Modern Web Developer & Innovative Tech Solutions Creator.",
                 viewBtn: "Visit Site", contactTitle: "Contact Me", lblEmail: "Email:", lblMsg: "Message:", btnSend: "Send",
-                footerText: "All Rights Reserved 2026 © Shvan Jamal",
+                footerText: "• Designed & Developed by SHVAN JAMAL • 2026",
                 projects: [
+                    { title: "Stop searching for movies! The ultimate Kurdish cinema experience is now in the palm of your hand. With KURD MOVIES, watch the latest global films and series in stunning 4K quality—completely ad-free. Everything is available in the Kurdish language.", link: "https://kurdmovies.netlify.app/", img: "https://i.ibb.co/YT8tFzDd/IMG-3436.jpg" },
                     { title: "Payven MN", desc: "Advanced platform for secure online services.", link: "https://payvenmn.netlify.app", img: "https://i.ibb.co/V0bH7gmG/IMG-3052.jpg" },
                     { title: "TikTok DL", desc: "Smart tool to download TikTok videos easily.", link: "https://tiktokdl.page.gd/", img: "https://i.ibb.co/84XXkWLD/IMG-3175.png" },
                     { title: "ShiMovies", desc: "A full website for international movies and series.", link: "https://shimovies.netlify.app", img: "https://i.ibb.co/vCQpvjjc/2-FC75-EE9-7-A46-4-D65-86-D8-58-F6-A245-BE1-E.png" },
@@ -226,4 +411,5 @@
         updateContent();
     </script>
 </body>
+
 </html>
